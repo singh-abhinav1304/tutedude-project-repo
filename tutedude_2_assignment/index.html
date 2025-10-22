@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <title>Laundry Wallah</title>
 </head>
 
@@ -165,18 +166,18 @@
                 </div>
                 <div class="book-now-section">
                     <h3 class="book-now-title">Book Now</h3>
-                    <form>
+                    <form id="contactForm">
                         <div class="form-name col-grid">
                             <label for="name">Full Name</label>
-                            <input type="text" id="name" placeholder="Jhon Doe" disabled>
+                            <input name="user_name" type="text" id="name" placeholder="Jhon Doe" disabled>
                         </div>
                         <div class="email-id">
                             <label for="email">Email ID</label>
-                            <input type="email" id="email" placeholder="jhon@gmail.com" disabled>
+                            <input name="user_email" type="email" id="email" placeholder="jhon@gmail.com" disabled>
                         </div>
                         <div class="phone-number">
                             <label for="phone-number">Phone Number</label>
-                            <input type="number" id="phone-number" placeholder="0000000000" disabled>
+                            <input name="user_number" type="number" id="phone-number" placeholder="0000000000" disabled>
                         </div>
                         <button type="submit" class="col-grid">Book now</button>
                     </form>
@@ -212,18 +213,20 @@
                         day stress-free.</p>
                 </div>
             </div>
-            <div class="footer-achievement">
-                <div class="hero-achieve-2 wrapper">
-                    <h2>Subscribe to our newsletter.</h2>
-                    <div class="">
-
+            <div class="footer-newsletter">
+                <div class="newsletter-footer wrapper">
+                    <h2>Subscribe to our <br> newsletter.</h2>
+                    <div class="newsletter-details">
+                        <input type="text" id="" placeholder="Full Name">
+                        <input type="email" id="" placeholder="Email">
+                        <button type="button">Subscribe</button>
                     </div>
                 </div>
             </div>
             <div class="main-footer wrapper">
                 <div class="footer-logo">
                     <h1>Logo</h1>
-                    <p>About us</p>
+                    <p class="about">About us</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, qui!
                     </p>
                 </div>
@@ -243,10 +246,13 @@
                     <span>+91 9123456780</span>
                 </div>
                 <div class="follow-us">
-                    <span>Instagram</span>
-                    <span>Facebook</span>
-                    <span>Twitter</span>
-                    <span>Youtube</span>
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <ion-icon name="logo-github"></ion-icon>
+                        <ion-icon name="logo-instagram"></ion-icon>
+                        <ion-icon name="logo-facebook"></ion-icon>
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </div>
                 </div>
             </div>
         </footer>
@@ -254,6 +260,7 @@
 
 
     <script src="./js/script.js"></script>
+    <script src="./js/email.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

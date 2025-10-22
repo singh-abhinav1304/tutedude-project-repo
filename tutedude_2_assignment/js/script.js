@@ -46,7 +46,7 @@ button.forEach(button => {
     let hideItem = document.getElementById("hide-item")
     if (cart == "") {
       hideItem.style.display = "flex"
-    }else{
+    } else {
       hideItem.style.display = "none"
     }
 
@@ -71,19 +71,8 @@ function renderList() {
   document.querySelector(".total-price-title").textContent = total
 }
 
-document.querySelector("form").addEventListener("submit", (e) => {
-  e.preventDefault()
-  let msg = document.querySelector("#sucessMsg")
-  if (cart == "") {
-    msg.textContent = `Cart is Empty!`
-    setTimeout(() => {
-      msg.textContent = ''
-    }, 3000)
-  } else {
-    setTimeout(() => {
-      msg.textContent = ''
-    }, 3000)
-    msg.textContent = "Order Placed"
-  }
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  localStorage.setItem("cartData", JSON.stringify(cart))
 
 })
