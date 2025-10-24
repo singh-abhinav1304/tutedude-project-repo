@@ -13,7 +13,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     user_name: this.user_name.value,
     user_email: this.user_email.value,
     user_number: this.user_number.value,
-    user_cart: cartSummary,
+    user_cart: cartSummary
   };
 
   emailjs.send("service_ag2t5pn", "template_vn9w4o4", params)
